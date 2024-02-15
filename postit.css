@@ -1,0 +1,115 @@
+/*
+ESERCIZIO 2:
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+.container {
+    background-color: #666666;
+    max-width: 1200px;
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    font-family: "Indie Flower", cursive;
+    text-align: center;
+}
+
+.box {
+    width: 230px;
+    height: 180px;
+    background-color: #fcfcca;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1.2s ease-in-out;
+    box-shadow: 5px 5px 10px #3d3d3d;
+    cursor: pointer;
+}
+
+.one {
+    rotate: -8deg;
+    background-color: #f8f9c7;
+    animation: start 0.5s;
+}
+
+.two {
+    rotate: 8deg;
+    background-color: #c9f9cb;
+    animation: start 3s;
+}
+
+.three {
+    rotate: -6deg;
+    background-color: #c6c6f1;
+    animation: start 1s;
+}
+
+.four {
+    rotate: 12deg;
+    background-color: #c9f9cb;
+    animation: start 4s;
+}
+
+.five {
+    rotate: -6deg;
+    animation: start 1.5s;
+}
+
+.six {
+    rotate: -10deg;
+    background-color: #c7c7f3;
+    animation: start 3.5s;
+}
+
+.seven {
+    rotate: -7deg;
+    animation: start 2s;
+}
+
+.eight {
+    rotate: 9deg;
+    background-color: #c8f8ca;
+    animation: start 2.5s;
+}
+
+.box:hover {
+    scale: 1.2;
+    rotate: 0deg;
+    box-shadow: 10px 10px 5px #3d3d3d;
+}
+
+@keyframes start {
+    0% {
+        opacity: 0;
+        trasform: scale(7);
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale(5);
+    }
+
+    75% {
+        opacity: 0.8;
+        trasform: scale (3);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
